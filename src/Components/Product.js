@@ -1,22 +1,27 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 // helper Function
-import { shorten } from '../helpers/functions';
+import { shorten } from "../helpers/functions";
 
-const Product = ({productData}) => {
-    return ( 
+const Product = ({ productData }) => {
+  return (
+    <div>
+      <img
+        src={productData.image}
+        alt="productImage"
+        style={{ width: "200px" }}
+      />
+      <h1>{shorten(productData.title)}</h1>
+      <p>{productData.price}</p>
+      <div>
+        <Link to={`/products/${productData.id}`}>details</Link>
         <div>
-            <img src={productData.image} alt="productImage" style={{width: "200px"}} />
-            <h1>{shorten(productData.title)}</h1>
-            <p>{productData.price}</p>
-            <div>
-                <a href="#z">details</a>
-                <div>
-                    <button>Add to cart</button>
-                </div>
-            </div>
+          <button>Add to cart</button>
         </div>
-     );
-}
- 
+      </div>
+    </div>
+  );
+};
+
 export default Product;

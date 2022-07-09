@@ -38,6 +38,20 @@ const cartReducer = (state, action) => {
       );
       state.selectedItems[IndexD].quantity--;
       return { ...state };
+    case "CHECKOUT":
+      return {
+        selectedItems: [],
+        shopCounter: 0,
+        total: 0,
+        checkout: true,
+      };
+    case "CLEAR":
+      return {
+        selectedItems: [],
+        shopCounter: 0,
+        total: 0,
+        checkout: false,
+      };
     default:
       return state;
   }

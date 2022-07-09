@@ -13,6 +13,7 @@ const cartReducer = (state, action) => {
     case "ADD_ITEM":
       if (!state.selectedItems.find((item) => item.id === action.payload.id)) {
         state.selectedItems.push({ ...action.payload, quantity: 1 });
+        console.log(state.selectedItems);
       }
       return {
         ...state,
@@ -22,6 +23,8 @@ const cartReducer = (state, action) => {
       const newSelectedItems = state.selectedItems.filter(
         (item) => item.id !== action.payload.id
       );
+      console.log(state.selectedItems);
+      console.log(state.selectedItems);
       return {
         ...state,
         selectedItems: [...newSelectedItems],
@@ -31,14 +34,17 @@ const cartReducer = (state, action) => {
         (item) => item.id === action.payload.id
       );
       state.selectedItems[IndexI].quantity++;
+      console.log(state.selectedItems);
       return { ...state };
     case "DECREASE":
       const IndexD = state.selectedItems.findIndex(
         (item) => item.id === action.payload.id
       );
       state.selectedItems[IndexD].quantity--;
+      console.log(state.selectedItems);
       return { ...state };
     case "CHECKOUT":
+      console.log(state.selectedItems);
       return {
         selectedItems: [],
         shopCounter: 0,
@@ -46,6 +52,7 @@ const cartReducer = (state, action) => {
         checkout: true,
       };
     case "CLEAR":
+      console.log(state.selectedItems);
       return {
         selectedItems: [],
         shopCounter: 0,

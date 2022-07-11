@@ -7,6 +7,9 @@ import { shorten, IsInCart, checkQuantity } from "../helpers/functions";
 // Context
 import { cartContext } from "../Context/CartContextProvider";
 
+// Icons
+import trash from "./../assets/icons/trash.svg";
+
 const Product = ({ productData }) => {
   const { state, dispatch } = useContext(cartContext);
 
@@ -37,7 +40,7 @@ const Product = ({ productData }) => {
                 dispatch({ type: "REMOVE_ITEM", payload: productData })
               }
             >
-              Remove
+              <img src={trash} alt="remove" style={{ width: "25px" }} />
             </button>
           )}
           {IsInCart(state, productData.id) ? (

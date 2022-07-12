@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 17px;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+.container:hover {
+  -webkit-box-shadow: 4px 4px 16px 2px rgba(0, 0, 0, 0.89);
+  box-shadow: 4px 4px 16px 2px rgba(0, 0, 0, 0.89);
+}
+.container p {
+  margin: 20px;
+}
+.cartImage {
+  width: 200px;
+  height: 200px;
+}
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.buttonContainer a {
+  color: #3c8ad7;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.buttonContainer button {
+  background-color: #74b9ff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+.handlerButtons {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}

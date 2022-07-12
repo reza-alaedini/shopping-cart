@@ -10,26 +10,30 @@ import { cartContext } from "../Context/CartContextProvider";
 // Icons
 import trash from "./../assets/icons/trash.svg";
 
+// Style CSS
+import styles from "./Product.module.css";
+
 const Product = ({ productData }) => {
   const { state, dispatch } = useContext(cartContext);
 
   return (
-    <div>
+    <div className={styles.container}>
       <img
         src={productData.image}
         alt="productImage"
-        style={{ width: "200px" }}
+        className={styles.cartImage}
       />
       <h1>{shorten(productData.title)}</h1>
-      <p>{productData.price}</p>
-      <div>
-        <Link to={`/products/${productData.id}`}>details</Link>
+      <p>{productData.price} $</p>
+      <div className={styles.buttonContainer}>
+        <Link to={`/products/${productData.id}`}>Details</Link>
         <div>
           {checkQuantity(state, productData.id) > 1 && (
             <button
               onClick={() =>
                 dispatch({ type: "DECREASE", payload: productData })
               }
+              className={styles.handlerButtons}
             >
               -
             </button>
@@ -39,8 +43,9 @@ const Product = ({ productData }) => {
               onClick={() =>
                 dispatch({ type: "REMOVE_ITEM", payload: productData })
               }
+              className={styles.handlerButtons}
             >
-              <img src={trash} alt="remove" style={{ width: "25px" }} />
+              <img src={trash} alt="remove" style={{width: "17px"}} />
             </button>
           )}
           {IsInCart(state, productData.id) ? (
@@ -48,6 +53,7 @@ const Product = ({ productData }) => {
               onClick={() =>
                 dispatch({ type: "INCREASE", payload: productData })
               }
+              className={styles.handlerButtons}
             >
               +
             </button>

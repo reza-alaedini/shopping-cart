@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  width: 250%;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid gray;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  margin-left: -10px;
+}
+.mainInfo h3 {
+  color: rgb(31, 130, 243);
+}
+.mainInfo p {
+  color: rgb(13, 183, 84);
+  font-size: 20px;
+}
+.quantity {
+  background-color: rgb(237, 193, 37);
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+}
+.btnContainer button {
+  margin: 3px;
+  background-color: rgb(31, 130, 243);
+  border: none;
+  padding: 5px;
+  width: 40px;
+  color: white;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btnContainer button img {
+    width: 15px;
+}

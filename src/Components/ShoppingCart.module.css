@@ -1,0 +1,42 @@
+.container {
+  width: 96%;
+  overflow-x: hidden;
+  display: flex;
+  margin-top: 110px;
+  justify-content: space-around;
+  padding: 35px;
+}
+.infoContainer {
+  border: 2px solid gray;
+  height: 40%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+.infoContainer h4 span {
+  color: rgb(31, 130, 243);
+}
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.clearBtn {
+  background-color: white;
+  border: none;
+  color: rgb(13, 183, 84);
+  font-size: 16px;
+  cursor: pointer;
+}
+.checkoutBtn {
+  background-color: rgb(13, 183, 84);
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 9px 13px -4px rgba(0, 0, 0, 0.78);
+  box-shadow: 0px 9px 13px -4px rgba(0, 0, 0, 0.78);
+  cursor: pointer;
+}

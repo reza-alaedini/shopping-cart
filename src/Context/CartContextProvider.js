@@ -29,6 +29,7 @@ const cartReducer = (state, action) => {
         ...state,
         selectedItems: [...state.selectedItems],
         ...sumItems(state.selectedItems),
+        checkout: false
       };
     case "REMOVE_ITEM":
       const newSelectedItems = state.selectedItems.filter(
@@ -39,6 +40,7 @@ const cartReducer = (state, action) => {
         ...state,
         selectedItems: [...newSelectedItems],
         ...sumItems(newSelectedItems),
+        checkout: false
       };
     case "INCREASE":
       const IndexI = state.selectedItems.findIndex(

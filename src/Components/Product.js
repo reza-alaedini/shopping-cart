@@ -45,8 +45,11 @@ const Product = ({ productData }) => {
               }
               className={styles.handlerButtons}
             >
-              <img src={trash} alt="remove" style={{width: "17px"}} />
+              <img src={trash} alt="remove" style={{ width: "17px" }} />
             </button>
+          )}
+          {checkQuantity(state, productData.id) > 0 && (
+            <span className={styles.counter}>{checkQuantity(state, productData.id)}</span>
           )}
           {IsInCart(state, productData.id) ? (
             <button

@@ -40,3 +40,30 @@
   box-shadow: 0px 9px 13px -4px rgba(0, 0, 0, 0.78);
   cursor: pointer;
 }
+.checkContainer{
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.checkContainer a{
+  color: white;
+  text-decoration: none;
+}
+.clearContainer{
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 40px;
+}
+.clearContainer a{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
